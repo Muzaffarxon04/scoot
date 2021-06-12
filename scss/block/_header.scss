@@ -1,0 +1,116 @@
+
+.header{
+    top: 0;
+    z-index: 50;
+    background-color:#ffffff;
+    position: fixed;
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        height: 86px;
+        width: 900px;
+        align-items: center;
+        padding: 10px 110px;
+        .menu{
+            list-style-type: none;
+            display: flex;
+            width: 200px;
+            position: relative;
+            right: 150px;
+            justify-content: space-between;
+        }
+        .menu__link{
+            text-decoration: none;
+            color: #939CAA;
+            &:hover{
+                color: #FCB72B;
+            }
+        }
+        .navbar__btn{
+            background-color: #FCB72B;
+            text-align: center;
+            padding: 20px  0;
+            height: 13px;
+            width: 180px;
+            color: #fff;
+            text-decoration: none;
+            &:hover{
+                background-color: transparent;
+                color: #FCB72B;
+                box-shadow:inset 3px 3px #FCB72B ,3px 3px #FCB72B;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px){
+.header{
+    .navbar{
+        width: 700px;
+        display: flex;
+        justify-content: space-between;
+        height: 66px;
+        align-items: center;
+        padding: 10px 20px;
+        .menu{
+            
+            display: flex;
+            width: 150px;
+             position: relative;
+            right: 80px;
+            justify-content: space-between;
+        }
+        .navbar__btn{
+            position: relative;
+            right: 100px;
+        }
+    }
+}
+}
+
+
+@media only screen and (max-width: 375px){
+    .header{
+        .navbar{
+            img{
+                padding-right: 170px;
+            }
+            width: 375px;
+            display: flex;
+            justify-content: space-between;
+            height: 46px;
+            align-items: center;
+            padding: 10px 50px;
+            .burger{
+                width: 20px;
+                height: 3px;
+                position: relative;
+                background-color:#FCB72B;
+
+                &::before{
+                    content: "";
+                    width: 20px;
+                    position: absolute;
+                    height: 3px;
+                    top: -8px;
+                    background-color: #FCB72B;
+                }
+                &::after{
+                    content: "";
+                    width: 20px;
+                    height: 3px;
+                    position: absolute;
+                    background-color: #FCB72B;
+                    top:7px;
+                }
+            }
+            .menu{
+            display: none;
+            }
+            .navbar__btn{
+                display: none;
+                
+            }
+        }
+    }
+}
