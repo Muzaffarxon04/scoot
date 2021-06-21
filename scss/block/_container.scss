@@ -1,12 +1,15 @@
 .container{
-    margin: 0 auto;
-    height: 3648px;
+  margin: 0 auto;
+  height: 3648px;
     width: 1120px;
     box-sizing: border-box;
+    overflow: hidden;
+    
 }
 .body{
     margin: 0;
     padding: 0;
+    
  h1,h2,h3, a{
         font-family:'Space Mono' sans-serif;
     }
@@ -16,7 +19,6 @@
       color: #939CAA;
     }
 }
-
 @media only screen and (max-width: 768px) {
     .container{
   height: 4662px;

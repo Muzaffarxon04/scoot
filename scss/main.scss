@@ -3,7 +3,164 @@ a{
     text-decoration: none;
 }
 .main{
-    background-color: #ffffff;
+    background-color: #fff;
+}
+.join{
+    height: 900px;
+    width: 1120px;
+    
+    .title{
+        text-align: center;
+    font-size: 48px;
+    }
+    .wrapper{
+        display: flex;
+        justify-content: space-around;
+        padding-top: 0px;
+        .text_wrapper{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+text-align: center;
+&::before{
+    content: "";
+    width: 240px;
+    height: 350px;
+    background-image: url(../img/phone.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+
+}
+.join__title{
+    font-size: 24px;
+}
+.join__text{
+    width: 290px;
+}
+}
+.motobike{
+    &::before{
+        background-image: url(../img/motosikl.png);
+    }
+}
+.humans{
+    &::before{
+        background-image: url(../img/human.png);
+    }
+}
+}
+}
+.bigtitle{
+    text-align: center;
+    font-size: 48px;
+}
+.options{
+    width: 950px;
+    height: 700px;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+   
+    .titls{
+        color:#000;
+        width: 180px;
+    height: 280px;
+    font-size: 40px;
+}
+.option{
+    background-color: #F2F5F9;
+    padding: 10px;
+    width: 550px;
+    margin-top: 10px;
+    &:hover{
+        background-color: #FFF4DF;
+  }
+    .option__title{
+        width: 500px;
+        display: inline-block;
+    }
+    .option__text{
+        width: 450px;
+    }
+    .option__btn{
+        background-color: transparent;
+        border: none;
+        transform: rotate(180deg);
+    }
+    .but{
+        transform: rotate(360deg);
+    }
+}
+}
+.info{
+    .apply__wrapper{
+        padding: 80px 0;
+    .apply{
+        width: 700px;
+        height: 130px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 100px;
+        align-items: center;
+        background-color: #F2F5F9;
+        margin-top: 30px;
+        .apply__btn{
+            background-color: #FCB72B;
+            width: 150px;
+            height: 35px;
+            text-align: center;
+            padding-top: 15px;
+            color: #fff;
+            &:hover{
+                background-color: transparent;
+                outline: 3px solid #FCB72B;
+                color: #FCB72B;
+            }
+        }
+    }
+}
+}
+.listed{
+    width: 1120px;
+    height: 900px;
+    background-image: url(../img/map.png);
+    position:relative;
+    background-repeat: no-repeat;
+    background-position:center 100px;
+    background-color: #fff;
+    
+    .text__wrapper{
+        display: flex;
+        align-items: center;
+        width: 1120px;
+        justify-content: space-around;
+        position: absolute;
+        bottom: 0;
+        .listed__title{
+            width: 200px;
+            font-size: 48px;
+            
+        }
+        .listed__text{
+            width: 300px;
+        }
+        .listed__btn{
+            background-color:#FCB72B;
+            width: 100px;
+            color: #fff;
+            height: 30px;
+            text-align: center;
+            padding-top: 10px;
+            &:hover{
+                border: 3px solid #FCB72B;
+                background-color: transparent;
+                height: 24px;
+                color: #FCB72B;
+                width: 96px;
+            }
+        }
+    }
+
 }
 .simple{
     
@@ -15,7 +172,10 @@ a{
     background-size: 1120px 650px;
     background-position-y: 50px;
     background-repeat: no-repeat;
-    
+    .titls{
+        visibility: hidden;
+        position: absolute;
+    }
     .simple__title{
         position: absolute;
         height: 112px;
@@ -25,6 +185,9 @@ a{
         font-size: 56px;    
         color:#fff;
         font-family:'Space Mono', sans-serif;
+        .titls{
+            visibility: hidden;
+        }
         &::before{
             content: "";
             width: 200px;
@@ -136,13 +299,30 @@ a{
     align-items: center;
     justify-content: space-between;
     padding: 20px;
+    .info_img{
+        position: relative;
+        right: 100px;
+        z-index: -1;
+    }
+    
     .text__wrapper{
-        width: 445px;
-        display: flex;
-        padding-right: 20px;
-        justify-content: space-around;
-        align-items: center;
-        .text__wrapper__wrapper{
+        .money{
+        margin-right: 110px;
+    }
+    width: 445px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+img{
+    position: relative;
+right: 40px;
+&:nth-child(even){
+    left: 40px;
+}
+}
+
+.text__wrapper__wrapper{
             margin: 110px;
             position: relative;
             &:nth-child(3){
@@ -162,22 +342,18 @@ a{
         .info__text{
             width: 300px;
             font-size: 15px;
-            &::before{
-                content: "";
-                width: 600px;
-                height: 200px;
-                right: 510px;
-                top: 250px;
-                left: 500px;
-                background-image: url(../img/r-arrow.svg);
-                position: absolute;
+            &::after{
+                    content: "";
+                    width: 670px;
+                    height: 200px;
+                    top: 250px;
+                    left: 450px;
+                    background-image: url(../img/r-arrow.svg);
+                    position: absolute;
                 background-repeat: no-repeat;
+                z-index: 20;
             }
-            .no2{
-                &::before{
-                    background-image: url(../img/mobil.svg);
-                }
-            }
+            
         }
         .info__btn{
             background-color: #FCB72B;
@@ -317,11 +493,10 @@ a{
             left: 30px;
             font-size: 40px;
             width: 300px;
-        }
-        
-        .simple__text{
-            position: absolute;
-            left: 40px;
+                    
+            .simple__text{
+                position: absolute;
+                left: 40px;
             top: 292px;
             width: 300px;
         }

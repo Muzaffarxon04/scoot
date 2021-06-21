@@ -1,11 +1,20 @@
+.scoot{
+    margin-top: 650px;
+}
+.foot{
+    margin-top: 850px;
+}
 .footer{
     .sign{
         height: 300px;
 width: 1120px;
-background-color: #495567;
+background-image: url(../../img/footer-bg.png);
+background-repeat: no-repeat;
+background-size: 1120px 300px;
+max-width: 1120px;
 display: flex;
 align-items: center;
-justify-content: space-evenly;
+justify-content: space-around;
 .wrapper{
     width: 370px;
     display: flex;
